@@ -7,6 +7,7 @@ SOURCES += \
     main.cpp \
     gameboard.cpp \
     aiplayer.cpp \
+    new.cpp \
     user.cpp \
     gamehistory.cpp \
     mainwindow.cpp
