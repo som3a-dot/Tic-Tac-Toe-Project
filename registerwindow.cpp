@@ -7,7 +7,7 @@
 
 registerwindow::registerwindow(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::registerwindow)
+    ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
 

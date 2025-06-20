@@ -1,22 +1,21 @@
 #ifndef AIPLAYER_H
 #define AIPLAYER_H
 
-#include "gameboard.h"
+#include <QVector>
 
 class AIPlayer {
-
-    
-
 public:
-    AIPlayer(char symbol);
-    void getBestMove(const GameBoard& board, int& row, int& col) const;
-    
-    private:
-    char symbol_;
-    int evaluateBoard(const GameBoard& board) const;
-    int minimax(GameBoard board, int depth, bool is_max, int alpha, int beta) const;
+    AIPlayer(char aiSymbol, char playerSymbol, const QString &difficulty);
+    void makeMove(QVector<QVector<char>> &board, int &row, int &col);
+    bool isBoardFull(const QVector<QVector<char>> &board);
+    bool checkWin(const QVector<QVector<char>> &board, char symbol);
 
-
+private:
+    char aiSymbol;
+    char playerSymbol;
+    QString difficulty;
+    int evaluateBoard(const QVector<QVector<char>> &board);
+    int minimax(QVector<QVector<char>> &board, int depth, bool isMaximizing, int alpha, int beta);
 };
 
 #endif // AIPLAYER_H

@@ -27,7 +27,6 @@ private slots:
     void on_LoginButton_clicked();
     void on_GuestButton_4_clicked();
     void on_clearButton_3_clicked();
-    void on_scoreManagerButton_clicked();
 
 private:
     Ui::MainWindow *ui;
