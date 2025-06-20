@@ -1,0 +1,36 @@
+[
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 2
+            },
+            {
+                "col": 1,
+                "row": 2
+            },
+            {
+                "col": 2,
+                "row": 0
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "zoma",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T18:10:11",
+        "winnerSymbol": "O"
+    }
+]

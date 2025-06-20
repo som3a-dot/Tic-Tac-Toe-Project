@@ -5,7 +5,7 @@
 #include "mainwindow.h"
 
 namespace Ui {
-class registerwindow;
+class RegisterWindow;
 }
 
 class registerwindow : public QDialog
@@ -26,7 +26,7 @@ private slots:
 
 
 private:
-    Ui::registerwindow *ui;
+    Ui::RegisterWindow *ui;
     QString hashPassword(const QString &password);
     QString checkPasswordStrength(const QString &password);
 };

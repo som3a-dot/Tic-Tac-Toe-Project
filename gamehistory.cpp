@@ -1,137 +1,120 @@
 #include "gamehistory.h"
-#include <QSqlQuery>
-#include <QSqlError>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QFile>
+#include <QDir>
 #include <QDebug>
 
-GameHistory::GameHistory() {
-    initDatabase();
-}
-
-GameHistory::~GameHistory() {
-    if (db_.isOpen()) {
-        db_.close();
+GameHistory::GameHistory(const QString &username) : username(username) {
+    if (!username.isEmpty()) {
+        historyFilePath = getHistoryFilePath();
     }
 }
 
-bool GameHistory::initDatabase() {
-    db_ = QSqlDatabase::addDatabase("QSQLITE", "history_connection");
-    db_.setDatabaseName("tictactoe.db");
-    if (!db_.open()) {
-        qDebug() << "Database error:" << db_.lastError().text();
-        return false;
+QString GameHistory::getHistoryFilePath() const {
+    QDir dir("history");
+    if (!dir.exists()) {
+        dir.mkpath(".");
     }
-
-    QSqlQuery query(db_);
-    query.exec("CREATE TABLE IF NOT EXISTS games ("
-               "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-               "user_id INTEGER, "
-               "user_username TEXT, "  // Added to store username
-               "player_x_name TEXT, "  // Added to store Player X's name
-               "player_o_name TEXT, "  // Added to store Player O's name
-               "result TEXT, "
-               "is_player_vs_ai INTEGER, "
-               "FOREIGN KEY(user_id) REFERENCES users(id))");
-
-    query.exec("CREATE TABLE IF NOT EXISTS moves ("
-               "game_id INTEGER, "
-               "move_number INTEGER, "
-               "row INTEGER, "
-               "col INTEGER, "
-               "FOREIGN KEY(game_id) REFERENCES games(id))");
-    return true;
+    return dir.filePath(QString("%1_game_history.json").arg(username));
 }
 
-bool GameHistory::saveGame(int user_id, const QString& user_username, const QString& player_x_name, const QString& player_o_name, const QString& result, const std::vector<std::pair<int, int>>& moves, bool is_player_vs_ai) {
-    QSqlQuery query(db_);
-    query.prepare("INSERT INTO games (user_id, user_username, player_x_name, player_o_name, result, is_player_vs_ai) VALUES (:user_id, :user_username, :player_x_name, :player_o_name, :result, :is_player_vs_ai)");
-    query.bindValue(":user_id", user_id);
-    query.bindValue(":user_username", user_username);
-    query.bindValue(":player_x_name", player_x_name);
-    query.bindValue(":player_o_name", player_o_name);
-    query.bindValue(":result", result);
-    query.bindValue(":is_player_vs_ai", is_player_vs_ai ? 1 : 0);
-    if (!query.exec()) {
-        qDebug() << "Save game error:" << query.lastError().text();
-        return false;
+void GameHistory::saveGame(const GameSession &session) {
+    if (username.isEmpty()) {
+        qDebug() << "No username provided, skipping game history save";
+        return;
     }
 
-    int game_id = query.lastInsertId().toInt();
-    for (size_t i = 0; i < moves.size(); ++i) {
-        const auto& move = moves[i];
-        query.prepare("INSERT INTO moves (game_id, move_number, row, col) VALUES (:game_id, :move_number, :row, :col)");
-        query.bindValue(":game_id", game_id);
-        query.bindValue(":move_number", static_cast<int>(i));
-        query.bindValue(":row", move.first);
-        query.bindValue(":col", move.second);
-        if (!query.exec()) {
-            qDebug() << "Save move error:" << query.lastError().text();
-            return false;
+    QFile file(historyFilePath);
+    QJsonArray historyArray;
+
+    if (file.open(QIODevice::ReadOnly)) {
+        QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
+        if (!doc.isNull() && doc.isArray()) {
+            historyArray = doc.array();
         }
+        file.close();
     }
-    return true;
+
+    QJsonObject sessionObj;
+    sessionObj["player1Name"] = session.player1Name;
+    sessionObj["player2Name"] = session.player2Name;
+    sessionObj["gameMode"] = session.gameMode;
+    sessionObj["outcome"] = session.outcome;
+    sessionObj["timestamp"] = session.timestamp.toString(Qt::ISODate);
+    sessionObj["winnerSymbol"] = session.winnerSymbol;
+
+    QJsonArray movesArray;
+    for (const auto &move : session.moves) {
+        QJsonObject moveObj;
+        moveObj["row"] = move.first;
+        moveObj["col"] = move.second;
+        movesArray.append(moveObj);
+    }
+    sessionObj["moves"] = movesArray;
+
+    historyArray.append(sessionObj);
+
+    if (file.open(QIODevice::WriteOnly)) {
+        QJsonDocument doc(historyArray);
+        file.write(doc.toJson(QJsonDocument::Indented));
+        file.close();
+    } else {
+        qDebug() << "Failed to open history file for writing:" << historyFilePath;
+    }
 }
 
-QStringList GameHistory::getGames(int user_id) const {
-    QStringList games;
-    QSqlQuery query(db_);
-    query.prepare("SELECT id, user_username, player_x_name, player_o_name, result, is_player_vs_ai FROM games WHERE user_id = :user_id");
-    query.bindValue(":user_id", user_id);
-    if (query.exec()) {
-        while (query.next()) {
-            int game_id = query.value("id").toInt();
-            QString user_username = query.value("user_username").toString();
-            QString player_x_name = query.value("player_x_name").toString();
-            QString player_o_name = query.value("player_o_name").toString();
-            QString result = query.value("result").toString();
-            bool is_player_vs_ai = query.value("is_player_vs_ai").toInt() == 1;
-            QString mode = is_player_vs_ai ? "Player vs AI" : "Player vs Player";
-            games << QString("Game %1: %2 (%3, %4 vs %5) by %6").arg(game_id).arg(result).arg(mode).arg(player_x_name).arg(player_o_name).arg(user_username);
+QVector<GameSession> GameHistory::loadGames() {
+    QVector<GameSession> games;
+    if (username.isEmpty()) {
+        qDebug() << "No username provided, returning empty game history";
+        return games;
+    }
+
+    QFile file(historyFilePath);
+    if (file.open(QIODevice::ReadOnly)) {
+        QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
+        if (!doc.isNull() && doc.isArray()) {
+            QJsonArray historyArray = doc.array();
+            for (const QJsonValue &value : std::as_const(historyArray)) {
+                if (value.isObject()) {
+                    QJsonObject obj = value.toObject();
+                    GameSession session;
+                    session.player1Name = obj["player1Name"].toString();
+                    session.player2Name = obj["player2Name"].toString();
+                    session.gameMode = obj["gameMode"].toString();
+                    session.outcome = obj["outcome"].toString();
+                    session.timestamp = QDateTime::fromString(obj["timestamp"].toString(), Qt::ISODate);
+                    session.winnerSymbol = obj["winnerSymbol"].toString();
+
+                    QJsonArray movesArray = obj["moves"].toArray();
+                    for (const QJsonValue &moveValue : std::as_const(movesArray)) {
+                        QJsonObject moveObj = moveValue.toObject();
+                        session.moves.append({moveObj["row"].toInt(), moveObj["col"].toInt()});
+                    }
+                    games.append(session);
+                }
+            }
         }
+        file.close();
+    } else {
+        qDebug() << "Failed to open history file for reading:" << historyFilePath;
     }
     return games;
 }
 
-std::vector<std::pair<int, int>> GameHistory::getGameMoves(int game_id) const {
-    std::vector<std::pair<int, int>> moves;
-    QSqlQuery query(db_);
-    query.prepare("SELECT row, col FROM moves WHERE game_id = :game_id ORDER BY move_number");
-    query.bindValue(":game_id", game_id);
-    if (query.exec()) {
-        while (query.next()) {
-            int row = query.value("row").toInt();
-            int col = query.value("col").toInt();
-            moves.emplace_back(row, col);
-        }
+void GameHistory::clearHistory() {
+    if (username.isEmpty()) {
+        qDebug() << "No username provided, skipping clear history";
+        return;
     }
-    return moves;
-}
 
-bool GameHistory::isGamePlayerVsAi(int game_id) const {
-    QSqlQuery query(db_);
-    query.prepare("SELECT is_player_vs_ai FROM games WHERE id = :game_id");
-    query.bindValue(":game_id", game_id);
-    if (query.exec() && query.next()) {
-        return query.value("is_player_vs_ai").toInt() == 1;
+    QFile file(historyFilePath);
+    if (file.open(QIODevice::WriteOnly)) {
+        file.write(QJsonDocument(QJsonArray()).toJson());
+        file.close();
+    } else {
+        qDebug() << "Failed to clear history file:" << historyFilePath;
     }
-    return false;
-}
-
-QString GameHistory::getPlayerXName(int game_id) const {
-    QSqlQuery query(db_);
-    query.prepare("SELECT player_x_name FROM games WHERE id = :game_id");
-    query.bindValue(":game_id", game_id);
-    if (query.exec() && query.next()) {
-        return query.value("player_x_name").toString();
-    }
-    return "Player X";
-}
-
-QString GameHistory::getPlayerOName(int game_id) const {
-    QSqlQuery query(db_);
-    query.prepare("SELECT player_o_name FROM games WHERE id = :game_id");
-    query.bindValue(":game_id", game_id);
-    if (query.exec() && query.next()) {
-        return query.value("player_o_name").toString();
-    }
-    return "Player O";
 }

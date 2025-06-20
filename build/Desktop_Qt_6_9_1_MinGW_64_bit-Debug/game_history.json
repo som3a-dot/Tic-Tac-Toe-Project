@@ -1,0 +1,70 @@
+[
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 2
+            },
+            {
+                "col": 1,
+                "row": 0
+            },
+            {
+                "col": 2,
+                "row": 0
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "Player",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T17:53:17",
+        "winnerSymbol": "O"
+    },
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 1,
+                "row": 0
+            },
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 2,
+                "row": 0
+            },
+            {
+                "col": 2,
+                "row": 2
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "Player",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T17:55:11",
+        "winnerSymbol": "O"
+    }
+]

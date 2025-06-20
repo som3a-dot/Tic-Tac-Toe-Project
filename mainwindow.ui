@@ -6,17 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1066</width>
-    <height>596</height>
+    <width>1186</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Login</string>
+   <string>MainWindow</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
-background-image: url(:/image/5599352.jpg);
-background-position:center;
+background-image: url(:/image/4599316.jpg);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -25,14 +24,17 @@ background-position:center;
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>201</width>
-      <height>81</height>
+      <width>250</width>
+      <height>90</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton 
@@ -48,62 +50,11 @@ background-color: teal;
      <string>REGISTER</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="LoginButton">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>360</y>
-      <width>411</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>LOGIN</string>
-    </property>
-   </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>200</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="page"/>
-    <widget class="QWidget" name="page_2"/>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>60</y>
-      <width>251</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>26</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>TIC TAK TOE</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>200</y>
+      <x>380</x>
+      <y>170</y>
       <width>140</width>
       <height>33</height>
      </rect>
@@ -113,6 +64,11 @@ background-color: teal;
       <pointsize>15</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:black;
+}</string>
+    </property>
     <property name="text">
      <string>USERNAME :</string>
     </property>
@@ -120,29 +76,29 @@ background-color: teal;
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>230</y>
+      <x>380</x>
+      <y>200</y>
       <width>411</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>15</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit
-{ 
-background-color:white;
+     <string notr="true">QLineEdit {
+background-image: url(:/image/4599316.jpg);
+color:white
 }</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>280</y>
+      <x>380</x>
+      <y>270</y>
       <width>141</width>
       <height>33</height>
      </rect>
@@ -152,6 +108,11 @@ background-color:white;
       <pointsize>15</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:black;
+}</string>
+    </property>
     <property name="text">
      <string>PASSWORD :</string>
     </property>
@@ -159,34 +120,142 @@ background-color:white;
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>310</y>
+      <x>380</x>
+      <y>300</y>
       <width>411</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>15</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit
-{ 
-background-color:white;
+     <string notr="true">QLineEdit {
+background-image: url(:/image/4599316.jpg);
+color:white
 }</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::EchoMode::Password</enum>
     </property>
    </widget>
+   <widget class="QPushButton" name="clearButton_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>440</y>
+      <width>411</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton 
+{ 
+background-color: teal;
+      color: white;
+        font-size: 20px;
+        border-radius: 30px;
+        padding: 10px 20px
+}</string>
+    </property>
+    <property name="text">
+     <string>CLEAR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>361</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:white
+}</string>
+    </property>
+    <property name="text">
+     <string>TIC TAK TOE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>80</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:white
+}</string>
+    </property>
+    <property name="text">
+     <string>WELCOME TO THE GAME</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LoginButton">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>360</y>
+      <width>411</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton 
+{ 
+background-color: teal;
+      color: white;
+        font-size: 20px;
+        border-radius: 30px;
+        padding: 10px 20px
+}</string>
+    </property>
+    <property name="text">
+     <string>LOGIN</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="GuestButton_4">
     <property name="geometry">
      <rect>
-      <x>840</x>
+      <x>930</x>
       <y>10</y>
-      <width>221</width>
-      <height>81</height>
+      <width>250</width>
+      <height>90</height>
      </rect>
     </property>
     <property name="font">
@@ -211,42 +280,16 @@ background-color: teal;
      <string>PLAY AS GUEST</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="clearButton_3">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>410</y>
-      <width>411</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>17</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>CLEAR</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>130</y>
-      <width>281</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>WELCOME TO THE GAME</string>
-    </property>
-   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1186</width>
+     <height>26</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
