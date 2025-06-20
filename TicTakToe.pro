@@ -1,26 +1,55 @@
-QT       += core gui sql
+QT       += core gui
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
 
+# You can make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
 SOURCES += \
-    main.cpp \
-    gameboard.cpp \
+    aidifficultywindow.cpp \
     aiplayer.cpp \
-    new.cpp \
-    user.cpp \
+    gameboard.cpp \
     gamehistory.cpp \
-    mainwindow.cpp
+    gamemodewindow.cpp \
+    historywindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    playernamewindow.cpp \
+    registerwindow.cpp \
+    settingswindow.cpp \
+    symbolwindow.cpp
 
 HEADERS += \
-    gameboard.h \
+    aidifficultywindow.h \
     aiplayer.h \
+    gameboard.h \
     gamehistory.h \
-    user.h \
-    gamehistory.h \
-    mainwindow.h
+    gamemodewindow.h \
+    historywindow.h \
+    mainwindow.h \
+    playernamewindow.h \
+    registerwindow.h \
+    settingswindow.h \
+    symbolwindow.h
+
+FORMS += \
+    aidifficultywindow.ui \
+    gameboard.ui \
+    gamemodewindow.ui \
+    historywindow.ui \
+    mainwindow.ui \
+    playernamewindow.ui \
+    registerwindow.ui \
+    settingswindow.ui \
+    symbolwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc
