@@ -22,6 +22,7 @@ SOURCES += \
     settingswindow.cpp \
     symbolwindow.cpp
 
+HEADERS += \
     aidifficultywindow.h \
     aiplayer.h \
     gameboard.h \
