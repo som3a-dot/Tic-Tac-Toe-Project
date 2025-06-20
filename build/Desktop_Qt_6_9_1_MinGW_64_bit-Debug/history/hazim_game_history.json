@@ -1,0 +1,134 @@
+[
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 1,
+                "row": 0
+            },
+            {
+                "col": 2,
+                "row": 0
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 2
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "hazim",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T18:09:24",
+        "winnerSymbol": "O"
+    },
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 2,
+                "row": 1
+            },
+            {
+                "col": 2,
+                "row": 0
+            },
+            {
+                "col": 2,
+                "row": 2
+            },
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 2
+            },
+            {
+                "col": 1,
+                "row": 0
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "hazim",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T18:09:26",
+        "winnerSymbol": "O"
+    },
+    {
+        "gameMode": "Player vs Player",
+        "moves": [
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 0
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 2
+            }
+        ],
+        "outcome": "player1 wins",
+        "player1Name": "player1",
+        "player2Name": "player2",
+        "timestamp": "2025-06-20T18:15:30",
+        "winnerSymbol": "X"
+    },
+    {
+        "gameMode": "Player vs AI",
+        "moves": [
+            {
+                "col": 0,
+                "row": 0
+            },
+            {
+                "col": 1,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 1
+            },
+            {
+                "col": 0,
+                "row": 2
+            },
+            {
+                "col": 1,
+                "row": 0
+            },
+            {
+                "col": 2,
+                "row": 0
+            }
+        ],
+        "outcome": "AI wins",
+        "player1Name": "hazim",
+        "player2Name": "AI",
+        "timestamp": "2025-06-20T19:02:24",
+        "winnerSymbol": "O"
+    }
+]
