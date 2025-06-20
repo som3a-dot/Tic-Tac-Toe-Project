@@ -1,4 +1,4 @@
-name: Build Qt App
+name: Build and Test Qt App
 
 on:
   push:
@@ -7,19 +7,54 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Qt (using apt)
+      - name: Install Qt and dependencies
         run: |
           sudo apt update
-          sudo apt install -y qt5-qmake qtbase5-dev g++ make
+          sudo apt install -y qt5-qmake qtbase5-dev g++ make cmake ninja-build
 
-      - name: Build with qmake
+      - name: Install GoogleTest
+        run: |
+          git clone https://github.com/google/googletest.git
+          cd googletest
+          cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+          sudo cmake --build build --target install
+
+      - name: Build the main Qt app
         run: |
           qmake TICTAKTOE.pro
           make
+
+      - name: Build and Run Unit Tests
+        run: |
+          cd tests/unit
+          qmake test_unit.pro
+          make
+          ./test_unit --gtest_output=xml:unit_test_results.xml
+
+      - name: Build and Run Integration Tests
+        run: |
+          cd ../../tests/integration
+          qmake test_integration.pro
+          make
+          ./test_integration --gtest_output=xml:integration_test_results.xml
+
+      - name: Upload Unit Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-report
+          path: tests/unit/unit_test_results.xml
+
+      - name: Upload Integration Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-test-report
+          path: tests/integration/integration_test_results.xml
