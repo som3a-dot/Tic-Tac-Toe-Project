@@ -30,17 +30,28 @@ jobs:
           qmake TICTAKTOE.pro -spec win32-g++
           mingw32-make
 
-      - name: Prepare artifact for release
+      - name: Prepare dist folder
         run: |
           mkdir dist
-          copy .\${{ env.EXE_NAME }} dist\
+          copy .\TICTAKTOE.exe dist\
+          copy .\Qt6Core.dll dist\
+          copy .\Qt6Gui.dll dist\
+          copy .\Qt6Widgets.dll dist\
+          copy .\libgcc_s_seh-1.dll dist\
+          copy .\libwinpthread-1.dll dist\
+          copy .\libstdc++-6.dll dist\
+          mkdir dist\platforms
+          copy .\platforms\qwindows.dll dist\platforms\
 
-      - name: Upload to GitHub Release
+      - name: Create ZIP of dist folder
+        run: Compress-Archive -Path dist\* -DestinationPath TICTAKTOE-win.zip
+
+      - name: Upload ZIP to GitHub Release
         if: github.event_name == 'push'
         uses: softprops/action-gh-release@v1
         with:
           name: "Release ${{ github.sha }}"
           tag_name: "release-${{ github.run_number }}"
-          files: dist/*
+          files: TICTAKTOE-win.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
