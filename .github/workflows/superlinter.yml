@@ -11,23 +11,19 @@ jobs:
     runs-on: windows-latest
 
     env:
-      BUILD_DIR: build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug
       EXE_NAME: TICTAKTOE.exe
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Qt for MinGW
-        run: |
-          choco install qtcreator -y
-          choco install qt5-default -y
-          choco install make -y
-
-      - name: Add Qt and tools to PATH
-        run: |
-          echo "C:\Qt\6.9.1\mingw_64\bin" | Out-File -Append -FilePath $env:GITHUB_PATH
-          echo "C:\ProgramData\chocolatey\bin" | Out-File -Append -FilePath $env:GITHUB_PATH
+      - name: Set up Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.5.0'
+          target: 'desktop'
+          arch: 'win64_mingw'
+          setup-python: false
 
       - name: Build the Qt app
         run: |
@@ -37,7 +33,7 @@ jobs:
       - name: Prepare artifact for release
         run: |
           mkdir dist
-          copy "TICTAKTOE\${{ env.BUILD_DIR }}\${{ env.EXE_NAME }}" dist\
+          copy .\${{ env.EXE_NAME }} dist\
 
       - name: Upload to GitHub Release
         if: github.event_name == 'push'
