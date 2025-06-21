@@ -1,6 +1,5 @@
 name: CI/CD for Qt App (Windows - MinGW)
 
-
 on:
   push:
     branches: [ main ]
