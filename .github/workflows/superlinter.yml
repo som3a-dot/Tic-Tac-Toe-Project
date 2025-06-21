@@ -31,7 +31,6 @@ jobs:
 
       - name: Build the Qt app
         run: |
-          cd TICTAKTOE
           qmake TICTAKTOE.pro -spec win32-g++
           mingw32-make
 
