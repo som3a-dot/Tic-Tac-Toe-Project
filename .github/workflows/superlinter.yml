@@ -1,4 +1,4 @@
-name: Build Qt App
+name: CI/CD for Qt App (Windows - MinGW)
 
 on:
   push:
@@ -7,19 +7,45 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: windows-latest
+
+    env:
+      BUILD_DIR: build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug
+      EXE_NAME: TICTAKTOE.exe
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Qt (using apt)
+      - name: Set up Qt for MinGW
         run: |
-          sudo apt update
-          sudo apt install -y qt5-qmake qtbase5-dev g++ make
+          choco install qtcreator -y
+          choco install qt5-default -y
+          choco install make -y
 
-      - name: Build with qmake
+      - name: Add Qt and tools to PATH
         run: |
-          qmake TICTAKTOE.pro
-          make
+          echo "C:\Qt\6.9.1\mingw_64\bin" | Out-File -Append -FilePath $env:GITHUB_PATH
+          echo "C:\ProgramData\chocolatey\bin" | Out-File -Append -FilePath $env:GITHUB_PATH
+
+      - name: Build the Qt app
+        run: |
+          cd TICTAKTOE
+          qmake TICTAKTOE.pro -spec win32-g++
+          mingw32-make
+
+      - name: Prepare artifact for release
+        run: |
+          mkdir dist
+          copy "TICTAKTOE\${{ env.BUILD_DIR }}\${{ env.EXE_NAME }}" dist\
+
+      - name: Upload to GitHub Release
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Release ${{ github.sha }}"
+          tag_name: "release-${{ github.run_number }}"
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
