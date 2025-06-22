@@ -79,9 +79,14 @@ void historywindow::replayNextMove()
         // In Player vs Player, Player 1 is 'O', Player 2 is 'X'
         symbol = (currentMoveIndex % 2 == 0) ? "X" : "O";
     } else {
-        // In Player vs AI, use winnerSymbol to determine player and AI symbols
-        char playerSymbol = session.winnerSymbol[0].toLatin1(); // Player's symbol if they won
-        char aiSymbol = (playerSymbol == 'X') ? 'O' : 'X';     // AI's opposite symbol
+        char playerSymbol = 'X';  // Default
+        char aiSymbol = 'O';
+
+        if (!session.winnerSymbol.isEmpty()) {
+            playerSymbol = session.winnerSymbol[0].toLatin1();
+            aiSymbol = (playerSymbol == 'X') ? 'O' : 'X';
+        } else {
+        }
 
         if (session.outcome.contains("Player wins")) {
             // Player won, first move is player's symbol, alternate with AI's
