@@ -36,6 +36,7 @@ bool MainWindow::isUsernameTaken(const QString &username) const
 void MainWindow::addRegisteredUser(const QString &username, const QString &hashedPassword)
 {
     registeredUsers[username] = hashedPassword;
+    saveRegisteredUsers();
 }
 
 void MainWindow::on_RegisterButton_2_clicked()
