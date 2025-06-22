@@ -3,6 +3,7 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QDebug>
+
 historywindow::historywindow(const QString &username, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::HistoryWindow)
@@ -94,7 +95,6 @@ void historywindow::replayNextMove()
         }
     }
 
-    // Update the replay board with color
     QPushButton *button = nullptr;
     if (row == 0 && col == 0) button = ui->replay_0_0;
     else if (row == 0 && col == 1) button = ui->replay_0_1;
@@ -105,13 +105,7 @@ void historywindow::replayNextMove()
     else if (row == 2 && col == 0) button = ui->replay_2_0;
     else if (row == 2 && col == 1) button = ui->replay_2_1;
     else if (row == 2 && col == 2) button = ui->replay_2_2;
-
     if (button) {
-        if (symbol == "X") {
-            button->setStyleSheet("color: red;");
-        } else if (symbol == "O") {
-            button->setStyleSheet("color: blue;");
-        }
         button->setText(symbol);
     }
 }

@@ -32,6 +32,25 @@ background-image: url(:/image/4599316.jpg);
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -49,6 +68,25 @@ background-image: url(:/image/4599316.jpg);
     <font>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -68,6 +106,25 @@ background-image: url(:/image/4599316.jpg);
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -85,6 +142,25 @@ background-image: url(:/image/4599316.jpg);
     <font>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -119,6 +195,25 @@ background-image: url(:/image/4599316.jpg);
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -136,6 +231,25 @@ background-image: url(:/image/4599316.jpg);
     <font>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -155,6 +269,25 @@ background-image: url(:/image/4599316.jpg);
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -164,7 +297,7 @@ background-image: url(:/image/4599316.jpg);
     <rect>
      <x>330</x>
      <y>220</y>
-     <width>181</width>
+     <width>201</width>
      <height>71</height>
     </rect>
    </property>
@@ -187,7 +320,7 @@ background-color: teal;
 }</string>
    </property>
    <property name="text">
-    <string>REPLAY</string>
+    <string>Replay</string>
    </property>
   </widget>
   <widget class="QPushButton" name="clearHistoryButton_2">
@@ -195,7 +328,7 @@ background-color: teal;
     <rect>
      <x>330</x>
      <y>300</y>
-     <width>181</width>
+     <width>201</width>
      <height>71</height>
     </rect>
    </property>
@@ -218,7 +351,7 @@ background-color: teal;
 }</string>
    </property>
    <property name="text">
-    <string>CLEAR HISTORY</string>
+    <string>Clear History</string>
    </property>
   </widget>
   <widget class="QPushButton" name="replay_1_2">
@@ -234,6 +367,25 @@ background-color: teal;
     <font>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -252,6 +404,25 @@ background-color: teal;
     <font>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #263238;          
+    border: 2px solid #FFFFFF;         
+    color: #FFFFFF;                     
+}
+
+QPushButton:hover {
+    background-color: #37474F;          
+    border: 2px solid #FFFFFF;       
+    color: #000000;                    
+}
+
+QPushButton:pressed {
+    background-color: #1C2529;        
+    border: 2px solid #FFFFFF;         
+    color: #B0BEC5;                     
+}</string>
    </property>
    <property name="text">
     <string/>

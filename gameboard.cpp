@@ -14,6 +14,8 @@ GameBoard::GameBoard(const QString &username, QWidget *parent) :
     aiPlayer(nullptr),
     playerSymbol('X'),
     aiSymbol('O'),
+    player1Name(username.isEmpty() ? "Player 1" : username),
+    player2Name("Player 2"),
     player1Score(0),
     player2Score(0),
     tieScore(0),
@@ -66,11 +68,6 @@ void GameBoard::onButtonClicked()
         moveSymbol = (currentPlayer == 1) ? "X" : "O";
     } else {
         moveSymbol = (currentPlayer == 1) ? QString(playerSymbol) : QString(aiSymbol);
-    }
-    if (moveSymbol == "X") {
-        button->setStyleSheet("color: red;");
-    } else if (moveSymbol == "O") {
-        button->setStyleSheet("color: blue;");
     }
     button->setText(moveSymbol);
     int row = (button == ui->button_0_0 || button == ui->button_0_1 || button == ui->button_0_2) ? 0 :
@@ -129,14 +126,7 @@ void GameBoard::onButtonClicked()
             else if (aiRow == 2 && aiCol == 0) aiButton = ui->button_2_0;
             else if (aiRow == 2 && aiCol == 1) aiButton = ui->button_2_1;
             else if (aiRow == 2 && aiCol == 2) aiButton = ui->button_2_2;
-            if (aiButton) {
-                if (aiMoveSymbol == "X") {
-                    aiButton->setStyleSheet("color: red;");
-                } else if (aiMoveSymbol == "O") {
-                    aiButton->setStyleSheet("color: blue;");
-                }
-                aiButton->setText(aiMoveSymbol);
-            }
+            aiButton->setText(aiMoveSymbol);
             currentGameMoves.append({aiRow, aiCol});
             currentPlayer = 1;
         }
