@@ -31,6 +31,7 @@ background-image: url(:/image/4599316.jpg);
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -58,6 +59,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -85,6 +87,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">

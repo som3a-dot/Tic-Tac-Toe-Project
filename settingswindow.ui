@@ -31,6 +31,7 @@ background-image: url(:/image/4599316.jpg);
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -39,7 +40,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>SWITCH ACCOUNT</string>
+     <string>Switch account</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -54,6 +55,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -62,7 +64,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>HISTORY</string>
+     <string>History</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -77,6 +79,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -85,7 +88,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>EXIT</string>
+     <string>Exit</string>
     </property>
    </widget>
    <widget class="QPushButton" name="switchaccountButton_3">
@@ -120,13 +123,14 @@ border-radius:20px;
      <rect>
       <x>70</x>
       <y>10</y>
-      <width>191</width>
+      <width>201</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -231,6 +235,7 @@ border-radius:20px;
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -239,7 +244,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>BACK</string>
+     <string>Back</string>
     </property>
    </widget>
   </widget>

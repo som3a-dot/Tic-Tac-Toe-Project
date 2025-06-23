@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1186</width>
-    <height>629</height>
+    <width>1197</width>
+    <height>679</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,13 +24,14 @@ background-image: url(:/image/4599316.jpg);
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>250</width>
-      <height>90</height>
+      <width>341</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -47,7 +48,7 @@ background-color: teal;
 }</string>
     </property>
     <property name="text">
-     <string>REGISTER</string>
+     <string>Don't have an account? sign up </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -62,6 +63,7 @@ background-color: teal;
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -70,7 +72,7 @@ color:black;
 }</string>
     </property>
     <property name="text">
-     <string>USERNAME :</string>
+     <string>Username :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -85,6 +87,7 @@ color:black;
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -106,6 +109,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -114,7 +118,7 @@ color:black;
 }</string>
     </property>
     <property name="text">
-     <string>PASSWORD :</string>
+     <string>Password :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -129,6 +133,7 @@ color:black;
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -153,6 +158,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -169,21 +175,22 @@ background-color: teal;
 }</string>
     </property>
     <property name="text">
-     <string>CLEAR</string>
+     <string>Clear</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>10</y>
-      <width>361</width>
+      <x>440</x>
+      <y>0</y>
+      <width>391</width>
       <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>40</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -192,14 +199,14 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>TIC TAK TOE</string>
+     <string>TIC TAC TOE</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>80</y>
+      <x>410</x>
+      <y>70</y>
       <width>481</width>
       <height>41</height>
      </rect>
@@ -230,6 +237,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -246,21 +254,22 @@ background-color: teal;
 }</string>
     </property>
     <property name="text">
-     <string>LOGIN</string>
+     <string>Login</string>
     </property>
    </widget>
    <widget class="QPushButton" name="GuestButton_4">
     <property name="geometry">
      <rect>
-      <x>930</x>
+      <x>850</x>
       <y>10</y>
-      <width>250</width>
-      <height>90</height>
+      <width>331</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -277,7 +286,7 @@ background-color: teal;
 }</string>
     </property>
     <property name="text">
-     <string>PLAY AS GUEST</string>
+     <string>Play as guest</string>
     </property>
    </widget>
   </widget>
@@ -286,7 +295,7 @@ background-color: teal;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1186</width>
+     <width>1197</width>
      <height>26</height>
     </rect>
    </property>

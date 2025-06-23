@@ -24,13 +24,14 @@ background-image: url(:/image/4599316.jpg);
      <rect>
       <x>100</x>
       <y>-20</y>
-      <width>451</width>
+      <width>461</width>
       <height>121</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -54,6 +55,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -77,6 +79,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>20</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -89,7 +92,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>CLEAR</string>
+     <string>Clear</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditPlayer2">
@@ -104,6 +107,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -128,6 +132,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>20</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -140,7 +145,7 @@ color:white
 }</string>
     </property>
     <property name="text">
-     <string>OK</string>
+     <string>Ok</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -155,6 +160,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -178,6 +184,7 @@ color:white
     <property name="font">
      <font>
       <pointsize>15</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">

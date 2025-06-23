@@ -30,6 +30,7 @@ background-image: url(:/image/4599316.jpg);
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -67,6 +68,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -104,6 +106,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -141,6 +144,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -178,6 +182,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
   </widget>
@@ -193,6 +198,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -230,6 +236,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -267,6 +274,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -304,6 +312,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="cursor">
@@ -335,6 +344,7 @@ background-color: teal;
    <property name="font">
     <font>
      <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="cursor">
@@ -366,6 +376,7 @@ background-color: teal;
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -403,6 +414,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">

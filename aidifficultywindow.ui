@@ -31,6 +31,7 @@ background-image: url(:/image/4599316.jpg);
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -47,7 +48,7 @@ background-color: gold;
 }</string>
     </property>
     <property name="text">
-     <string>🧠MEDIUM🧠</string>
+     <string>🧠Medium🧠</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -62,6 +63,7 @@ background-color: gold;
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -85,6 +87,7 @@ color:white;
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -101,7 +104,7 @@ background-color: red;
 }</string>
     </property>
     <property name="text">
-     <string>🔥HARD🔥</string>
+     <string>🔥Hard🔥</string>
     </property>
    </widget>
    <widget class="QPushButton" name="easyButton">
@@ -116,6 +119,7 @@ background-color: red;
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -132,7 +136,7 @@ background-color: green;
 }</string>
     </property>
     <property name="text">
-     <string>✨EASY✨</string>
+     <string>✨Easy✨</string>
     </property>
    </widget>
    <widget class="QPushButton" name="backButton_2">
@@ -147,6 +151,7 @@ background-color: green;
     <property name="font">
      <font>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="cursor">
@@ -163,7 +168,7 @@ background-IMAGE: url(:/image/4599316.jpg);
 }</string>
     </property>
     <property name="text">
-     <string>BACK</string>
+     <string>Back</string>
     </property>
    </widget>
   </widget>
@@ -177,7 +182,6 @@ background-IMAGE: url(:/image/4599316.jpg);
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
