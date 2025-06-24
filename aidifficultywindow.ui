@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>552</width>
-    <height>459</height>
+    <width>1133</width>
+    <height>801</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,16 +22,18 @@ background-image: url(:/image/4599316.jpg);
    <widget class="QPushButton" name="mediumButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>170</y>
-      <width>401</width>
-      <height>71</height>
+      <x>150</x>
+      <y>370</y>
+      <width>361</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -40,54 +42,33 @@ background-image: url(:/image/4599316.jpg);
     <property name="styleSheet">
      <string notr="true">QPushButton 
 { 
-background-color: gold;
+background-color:  #030554;
       color: white;
         font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
         border-radius: 30px;
         padding: 10px 20px
 }</string>
     </property>
     <property name="text">
-     <string>🧠Medium🧠</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>-10</y>
-      <width>531</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white;
-}</string>
-    </property>
-    <property name="text">
-     <string>SELECT YOUR AI DIFFICULTY</string>
+     <string>Medium🧠</string>
     </property>
    </widget>
    <widget class="QPushButton" name="hardButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>250</y>
-      <width>401</width>
-      <height>71</height>
+      <x>150</x>
+      <y>440</y>
+      <width>361</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -96,30 +77,33 @@ color:white;
     <property name="styleSheet">
      <string notr="true">QPushButton 
 { 
-background-color: red;
+background-color:  #030554;
       color: white;
         font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
         border-radius: 30px;
         padding: 10px 20px
 }</string>
     </property>
     <property name="text">
-     <string>🔥Hard🔥</string>
+     <string>Hard🔥</string>
     </property>
    </widget>
    <widget class="QPushButton" name="easyButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>90</y>
-      <width>401</width>
-      <height>71</height>
+      <x>150</x>
+      <y>300</y>
+      <width>361</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -128,30 +112,33 @@ background-color: red;
     <property name="styleSheet">
      <string notr="true">QPushButton 
 { 
-background-color: green;
+background-color:  #030554;
       color: white;
         font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
         border-radius: 30px;
         padding: 10px 20px
 }</string>
     </property>
     <property name="text">
-     <string>✨Easy✨</string>
+     <string>Easy✨</string>
     </property>
    </widget>
    <widget class="QPushButton" name="backButton_2">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>330</y>
-      <width>401</width>
-      <height>71</height>
+      <x>150</x>
+      <y>630</y>
+      <width>361</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -160,10 +147,11 @@ background-color: green;
     <property name="styleSheet">
      <string notr="true">QPushButton 
 { 
-background-IMAGE: url(:/image/4599316.jpg);
+background-color:  #030554;
       color: white;
         font-size: 20px;
-  
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
         padding: 10px 20px
 }</string>
     </property>
@@ -171,16 +159,27 @@ background-IMAGE: url(:/image/4599316.jpg);
      <string>Back</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>552</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-80</y>
+      <width>1131</width>
+      <height>941</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/image/DifficultiyPhoto.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>mediumButton</zorder>
+   <zorder>hardButton</zorder>
+   <zorder>easyButton</zorder>
+   <zorder>backButton_2</zorder>
   </widget>
  </widget>
  <resources/>

@@ -10,8 +10,6 @@ registerwindow::registerwindow(QWidget *parent) :
     ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
-
-    // Connect the PASSWORD text changed signal to update strength
     connect(ui->lineEdit_2, &QLineEdit::textChanged, this, &registerwindow::onPasswordTextChanged);
 }
 

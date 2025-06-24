@@ -1,5 +1,14 @@
 <RCC>
     <qresource prefix="/image">
         <file>4599316.jpg</file>
+        <file>LoginPhoto.png</file>
+        <file>LoginPhoto2.png</file>
+        <file>ModePhoto.png</file>
+        <file>PlayerNamePhoto.png</file>
+        <file>DifficultiyPhoto.png</file>
+        <file>SymbolPhoto.png</file>
+        <file>GameBoardPhoto.png</file>
+        <file>SettingsPhoto.png</file>
+        <file>HistoryPhoto.png</file>
     </qresource>
 </RCC>

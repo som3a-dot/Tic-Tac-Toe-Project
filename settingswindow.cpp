@@ -29,7 +29,7 @@ void SettingsWindow::on_switchaccountButton_3_clicked()
 
 void SettingsWindow::on_historyButton_2_clicked()
 {
-    historywindow *historyWindow = new historywindow(username, nullptr);
+    HistoryWindow *historyWindow = new HistoryWindow(username, nullptr);
     historyWindow->show();
 }
 

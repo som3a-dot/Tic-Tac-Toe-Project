@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>393</height>
+    <width>1134</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,73 +22,79 @@ background-image: url(:/image/4599316.jpg);
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>-20</y>
-      <width>461</width>
-      <height>121</height>
+      <x>-60</x>
+      <y>-10</y>
+      <width>1251</width>
+      <height>841</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>25</pointsize>
-      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white
-}</string>
+     <string notr="true">image: url(:/image/PlayerNamePhoto.png);</string>
     </property>
     <property name="text">
-     <string>SELECT PLAYER NAMES</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>141</width>
-      <height>51</height>
+      <x>280</x>
+      <y>360</y>
+      <width>191</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white
-}</string>
+     <string notr="true">font: 20pt &quot;The Sunday&quot;;
+color: #030554;
+</string>
     </property>
     <property name="text">
-     <string>player (1) X :</string>
+     <string>player (1)  X :</string>
     </property>
    </widget>
    <widget class="QPushButton" name="clearButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>260</y>
+      <x>370</x>
+      <y>630</y>
       <width>171</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
@@ -98,50 +104,63 @@ color:white
    <widget class="QLineEdit" name="lineEditPlayer2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>190</y>
-      <width>341</width>
+      <x>490</x>
+      <y>440</y>
+      <width>411</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QLineEdit {
+	font: 14pt &quot;The Sunday&quot;;
+    color: #030554;
+    border: 2px solid #01004c;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
 }</string>
     </property>
     <property name="text">
-     <string>player2</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="okButton_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>260</y>
+      <x>610</x>
+      <y>630</y>
       <width>171</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
@@ -151,22 +170,24 @@ color:white
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>180</y>
-      <width>151</width>
+      <x>280</x>
+      <y>440</y>
+      <width>191</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white
-}</string>
+     <string notr="true">font: 20pt &quot;The Sunday&quot;;
+color: #030554;
+</string>
     </property>
     <property name="text">
      <string>player (2) O :</string>
@@ -175,38 +196,34 @@ color:white
    <widget class="QLineEdit" name="lineEditPlayer1">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
-      <width>341</width>
+      <x>490</x>
+      <y>360</y>
+      <width>411</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QLineEdit {
+	font: 14pt &quot;The Sunday&quot;;
+    color: #030554;
+    border: 2px solid #01004c;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
 }</string>
     </property>
     <property name="text">
-     <string>player1</string>
+     <string/>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>591</width>
-     <height>26</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>

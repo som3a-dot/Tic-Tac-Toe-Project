@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>296</width>
-    <height>342</height>
+    <width>1131</width>
+    <height>814</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,46 +22,50 @@ background-image: url(:/image/4599316.jpg);
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>240</y>
+      <x>820</x>
+      <y>410</y>
       <width>191</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>Backeth</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel {
-color:white
-}</string>
+     <string notr="true">
+font: 24pt &quot;Backeth&quot;;
+color: #030554;</string>
     </property>
     <property name="text">
-     <string>Switch account</string>
+     <string>Switch ACCOUNT</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>190</y>
+      <x>850</x>
+      <y>330</y>
       <width>101</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>Backeth</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel {
-color:white
-}</string>
+     <string notr="true">
+font: 24pt &quot;Backeth&quot;;
+color: #030554;</string>
     </property>
     <property name="text">
      <string>History</string>
@@ -70,22 +74,24 @@ color:white
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>140</y>
+      <x>860</x>
+      <y>570</y>
       <width>51</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>Backeth</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel {
-color:white
-}</string>
+     <string notr="true">
+font: 24pt &quot;Backeth&quot;;
+color: #030554;</string>
     </property>
     <property name="text">
      <string>Exit</string>
@@ -94,75 +100,67 @@ color:white
    <widget class="QPushButton" name="switchaccountButton_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>230</y>
-      <width>41</width>
-      <height>41</height>
+      <x>650</x>
+      <y>390</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:teal;
-border-radius:20px;
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
      <string>🔄</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="historyButton_2">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>10</y>
-      <width>201</width>
+      <x>650</x>
+      <y>310</y>
+      <width>151</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-color:white
-}</string>
-    </property>
-    <property name="text">
-     <string>SETTINGS</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="historyButton_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>180</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:blue;
-border-radius:20px;
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
@@ -172,51 +170,67 @@ border-radius:20px;
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>41</width>
-      <height>41</height>
+      <x>650</x>
+      <y>550</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:red;
-border-radius:20px;
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
-     <string>🚪</string>
+     <string>🔚</string>
     </property>
    </widget>
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>41</width>
-      <height>41</height>
+      <x>650</x>
+      <y>470</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <family>The Sunday</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:yellow;
-border-radius:20px;
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 14pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
@@ -226,39 +240,55 @@ border-radius:20px;
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>90</y>
+      <x>860</x>
+      <y>490</y>
       <width>63</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
+      <family>Backeth</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel {
-color:white
-}</string>
+     <string notr="true">
+font: 24pt &quot;Backeth&quot;;
+color: #030554;</string>
     </property>
     <property name="text">
      <string>Back</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-30</y>
+      <width>1131</width>
+      <height>871</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/image/SettingsPhoto.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_6</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>switchaccountButton_3</zorder>
+   <zorder>historyButton_2</zorder>
+   <zorder>exitButton</zorder>
+   <zorder>backButton</zorder>
+   <zorder>label_5</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>296</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

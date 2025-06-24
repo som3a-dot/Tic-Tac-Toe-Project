@@ -6,32 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>328</height>
+    <width>1132</width>
+    <height>803</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Game Mode Selection</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow {
-background-image: url(:/image/4599316.jpg);
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="settingButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>41</width>
-      <height>41</height>
+      <x>140</x>
+      <y>80</y>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
-      <bold>true</bold>
+      <family>Segoe UI</family>
+      <pointsize>36</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -39,8 +39,10 @@ background-image: url(:/image/4599316.jpg);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-color:teal;
+background-color:  #030554;
 border-radius:20px;
+	
+	font: 36pt &quot;Segoe UI&quot;;
 }</string>
     </property>
     <property name="text">
@@ -50,97 +52,88 @@ border-radius:20px;
    <widget class="QPushButton" name="playerVsPlayer">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>80</y>
+      <x>180</x>
+      <y>350</y>
       <width>321</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:Crimson;
-color:white;
-border-radius:20px;
-}</string>
-    </property>
-    <property name="text">
-     <string>👤vs👤Player Vs Player</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="playerVsAI">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>170</y>
-      <width>321</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color:SeaGreen;
-color:white;
-border-radius:20px;
-}</string>
-    </property>
-    <property name="text">
-     <string>👤🆚🤖 Player Vs AI</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>10</y>
-      <width>521</width>
       <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>18</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white
+     <string notr="true">QPushButton{
+background-color:  #030554;
+color:white;
+	font: 18pt &quot;The Sunday&quot;;
+border-radius:30px;
 }</string>
     </property>
     <property name="text">
-     <string>SELECT YOUR GAME MODE</string>
+     <string>Player Vs Player</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="playerVsAI">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>480</y>
+      <width>321</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>The Sunday</family>
+      <pointsize>18</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:  #030554;
+color:white;
+	font: 18pt &quot;The Sunday&quot;;
+border-radius:30px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Player Vs AI</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-40</y>
+      <width>1131</width>
+      <height>871</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/image/ModePhoto.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>settingButton</zorder>
+   <zorder>playerVsPlayer</zorder>
+   <zorder>playerVsAI</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>591</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

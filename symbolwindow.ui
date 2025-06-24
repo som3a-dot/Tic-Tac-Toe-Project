@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>387</width>
-    <height>284</height>
+    <width>1131</width>
+    <height>802</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,25 +22,32 @@ background-image: url(:/image/4599316.jpg);
    <widget class="QPushButton" name="xButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>90</y>
+      <x>170</x>
+      <y>350</y>
       <width>331</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>18</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 18pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
@@ -50,65 +57,57 @@ color:white
    <widget class="QPushButton" name="oButton_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>160</y>
+      <x>170</x>
+      <y>450</y>
       <width>331</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
+      <family>The Sunday</family>
+      <pointsize>18</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-image: url(:/image/4599316.jpg);
-color:white
+     <string notr="true">QPushButton 
+{ 
+background-color:  #030554;
+      color: white;
+        font-size: 20px;
+	font: 18pt &quot;The Sunday&quot;;
+        border-radius: 30px;
+        padding: 10px 20px
 }</string>
     </property>
     <property name="text">
      <string>O</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>-10</y>
-      <width>381</width>
-      <height>91</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1131</width>
+      <height>831</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>25</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-color:white;
-}</string>
+     <string notr="true">image: url(:/image/SymbolPhoto.png);</string>
     </property>
     <property name="text">
-     <string>SELECT YOUR SYMBOL</string>
+     <string/>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>387</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <zorder>label_2</zorder>
+   <zorder>xButton</zorder>
+   <zorder>oButton_2</zorder>
   </widget>
  </widget>
  <resources/>
