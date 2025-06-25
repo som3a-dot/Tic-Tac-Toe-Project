@@ -2,9 +2,11 @@ name: CI/CD for Qt App (Windows - MinGW)
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -29,8 +31,8 @@ jobs:
         run: |
           qmake TICTAKTOE.pro -spec win32-g++
           mingw32-make
-
-      - name: Debug: List build outputs
+          
+      - name: Debug:List build outputs
         run: |
           dir /s /b *.exe
           dir /s /b *.dll
@@ -84,3 +86,4 @@ jobs:
           files: TICTAKTOE-win.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          
