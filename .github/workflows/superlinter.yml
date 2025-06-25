@@ -32,10 +32,11 @@ jobs:
           qmake TICTAKTOE.pro -spec win32-g++
           mingw32-make
           
-      - name: Debug:List build outputs
+      - name: List build outputs
+        shell: pwsh
         run: |
-          dir /s /b *.exe
-          dir /s /b *.dll
+          Get-ChildItem -Recurse -Filter *.exe | Select-Object -ExpandProperty FullName
+          Get-ChildItem -Recurse -Filter *.dll | Select-Object -ExpandProperty FullName
 
       - name: Prepare dist folder
         shell: pwsh
